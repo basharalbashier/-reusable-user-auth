@@ -11,7 +11,7 @@ const port = 5555;
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors());
+app.use(cors({}));
 app.use("/user", user_router);
 app.use("/invoice", invoiceRouter);
 mongoose
